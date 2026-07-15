@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pacifico&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Fairy Light Border Animation -->
+    <div class="fairy-lights-container"></div>
+
+    <!-- Floating Hearts Background -->
+    <div class="hearts-container"></div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title" id="heroTitle">Happy Birthday!</h1>
+            <p class="hero-subtitle">A special day for a special person</p>
+        </section>
+
+        <!-- Cake & Candles Section -->
+        <section class="cake-section fade-in-up">
+            <h2>Make a Wish!</h2>
+            <div class="cake-container">
+                <!-- SVG Cake -->
+                <svg class="cake-svg" viewBox="0 0 200 250" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Cake Base -->
+                    <rect x="30" y="120" width="140" height="80" fill="#E8956D" rx="5"/>
+                    <!-- Cake Middle -->
+                    <rect x="35" y="80" width="130" height="50" fill="#D9825C" rx="5"/>
+                    <!-- Cake Top -->
+                    <rect x="40" y="40" width="120" height="50" fill="#E8956D" rx="5"/>
+                    <!-- Frosting swirls -->
+                    <path d="M 50 90 Q 60 80 70 90" stroke="#FFB6C1" stroke-width="3" fill="none"/>
+                    <path d="M 90 90 Q 100 80 110 90" stroke="#FFB6C1" stroke-width="3" fill="none"/>
+                    <path d="M 130 90 Q 140 80 150 90" stroke="#FFB6C1" stroke-width="3" fill="none"/>
+                    <!-- Candles: positions adjusted for animation -->
+                    <g class="candle candle-1">
+                        <rect x="55" y="25" width="8" height="20" fill="#F4E4C1"/>
+                        <circle class="flame flame-1" cx="59" cy="20" r="6" fill="#FF6B35"/>
+                    </g>
+                    <g class="candle candle-2">
+                        <rect x="96" y="20" width="8" height="25" fill="#F4E4C1"/>
+                        <circle class="flame flame-2" cx="100" cy="15" r="6" fill="#FF6B35"/>
+                    </g>
+                    <g class="candle candle-3">
+                        <rect x="137" y="25" width="8" height="20" fill="#F4E4C1"/>
+                        <circle class="flame flame-3" cx="141" cy="20" r="6" fill="#FF6B35"/>
+                    </g>
+                </svg>
+            </div>
+            <button class="blow-button" id="blowButton">🎂 Blow the Candles 🎂</button>
+        </section>
+
+        <!-- Balloons Section -->
+        <section class="balloons-section fade-in-up">
+            <h2>Floating Dreams</h2>
+            <div class="balloons-container" id="balloonsContainer"></div>
+        </section>
+
+        <!-- Fireworks Canvas -->
+        <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+        <!-- Personal Message Section -->
+        <section class="message-section fade-in-up">
+            <div class="message-card glass-morphism">
+                <h2 class="message-title">A Special Message</h2>
+                <p class="message-text">
+                    My Dearest,
+                </p>
+                <p class="message-text">
+                    On this beautiful day, I want you to know how incredibly grateful I am to have you in my life. 
+                    You bring joy, laughter, and love to every moment we share. Your smile lights up my darkest days, 
+                    and your presence makes everything feel like a celebration.
+                </p>
+                <p class="message-text">
+                    Thank you for being the amazing person you are. Thank you for your kindness, your strength, 
+                    and your beautiful heart. I can't wait to celebrate countless more birthdays with you, creating 
+                    memories that will last forever.
+                </p>
+                <p class="message-text message-signature">
+                    Forever yours,<br>
+                    Your Loving Partner ❤️
+                </p>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section class="gallery-section fade-in-up">
+            <h2>Our Precious Memories</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Photos will be populated by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Music Controls -->
+        <div class="music-control">
+            <button class="music-toggle" id="musicToggle" title="Toggle Background Music">
+                <span class="music-icon">🎵</span>
+            </button>
+            <audio id="bgMusic" loop>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+
+        <!-- Pop Sound (hidden) -->
+        <audio id="popSound" preload="auto">
+            <source src="data:audio/wav;base64,UklGRiYAAABXQVZFZm10IBAAAAABAAEAQB8AAAB9AAACABAAZGF0YQIAAAAAAA==" type="audio/wav">
+        </audio>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
